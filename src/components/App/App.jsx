@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../Navbar";
 import "./App.css";
+import TodayComponent from "../TodayComponent";
 
 class App extends Component {
   constructor(props) {
@@ -10,8 +11,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <NavBar />
+      <div className="app-container">
+        <div>
+          <NavBar />
+        </div>
+        <div className="app-today">
+          <TodayComponent />
+        </div>
       </div>
     );
   }
