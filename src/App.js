@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import ListComponent from "./components/ListComponent";
+import TodayComponent from "./components/TodayComponent";
+import GraphComponent from "./components/GraphComponent";
+import Navbar from "./components/Navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="app-container">
+        <div className="app-nav">
+          <Navbar />
+        </div>
+        <div className="app-today">
+          <TodayComponent />
+        </div>
+        <div className="app-list-graph">
+          <ListComponent />
+          <GraphComponent />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
